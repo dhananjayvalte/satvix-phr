@@ -1,0 +1,137 @@
+.form {
+    background-color: #ffffff;
+    height: 0;
+    width: 60%;
+    margin-right: auto;
+    margin-top: 0px;
+    padding: 0px;
+    text-align:left;
+}
+
+.formNew {
+    background-color: #FFF;
+    width: 35%;
+    margin-left: auto;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+.headerStyleAppointment{
+    margin-left: 45px;
+    color: #232323;
+    font-size: 14px;
+    margin-top: 1px;
+}
+
+.headerStyleScheduled{
+    margin-left: 45px;
+    color: #232323;
+    font-size: 14px;
+    margin-top: 14px;
+}
+
+.label {
+    color: #232323;
+    font-size: 14px;
+    height: 20px;
+    width: 105px;
+    margin-top: 10px;
+    text-align: right;
+    float:right;
+}
+
+.input {
+    height: 20px;
+    width: 325px;
+    border: 1.5px solid #c9c9c9;
+    margin-top: 10px;
+    margin-left: 15px;
+    padding: 5px;
+    font-size: 14px;
+    color: #232323;
+}
+
+.dropDown {
+    height: 30px;
+    width: 340px;
+    border-bottom: none;
+    border: 1.5px solid #c9c9c9;
+    margin-top: 10px;
+    margin-left: 0px;
+    font-size: 14px;
+}
+
+select:hover{
+        border: none !important;
+}
+
+.dropDown:hover, .dropDown:active {
+    height: 30px;
+    width: 340px;
+    border-bottom: none;
+    border: 1.5px solid blue;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+.buttonConfirm {
+    background-color: #669999;
+    color: #ffffff;
+    cursor: default;
+    font-size: 16px;
+    padding: 7px 15px;
+    margin-left: 10px;
+}
+
+.buttonClear {
+    background-color: #e7e7dd;
+    cursor: default; 
+    color: #232323;
+    font-size: 16px;
+    padding: 7px 20px;
+}
+
+.button {
+    margin-top: 15px;
+}
+
+.tbltd{
+      width: 100px;
+  }
+
+.bigblue {
+    color: #232323;
+    padding: 40px;
+    font-size: 14px;
+    margin-left: -25px;
+}
+
+.iconDetails {
+   margin-left:2%;
+   float:left; 
+} 
+   
+.container1 {
+       width:100%;
+       height:auto;
+       padding:1%;
+       margin-left: 35px;
+       margin-top: -20px;
+}
+
+.containe2 {
+    width:100%;
+    height:auto;
+    padding:1%;
+    margin-left: 35px;
+    margin-top: -20px;
+}
+
+select {color:gray;padding-left: 5px !important;}
+   
+select option:not(:first-child){
+      color: black !important;
+      padding-left: 20px !important;
+}
+
+option{padding-left: 20px !important;}  

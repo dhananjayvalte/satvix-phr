@@ -1,0 +1,70 @@
+div.jitu > div >div {
+    border-radius: 0rem !important;
+}
+
+div.jitu > div >div>div>div:first-child {
+   background-color: white !important; 
+   border-bottom: 1px solid gray !important;
+}
+
+div.jitu > div >div>div>div>div>div:hover {
+    background-color: #d9dbee !important; 
+    color:black !important;
+    border-radius: 0rem !important;
+}
+
+ div.jitu > div>div>div>div>div>div:active{
+    background-color: #c1c8f5 !important; 
+    border: none !important;
+    border-radius: 0rem !important;
+ }
+
+ div.jitu > div >div>div>div>div>ul{
+   padding-left: 2px !important;
+   padding-right: 2px !important;
+ }
+
+ div.jitu > div >div>div>div>div>ul>li{
+   padding: 0px !important;
+   padding-top: 5px !important;
+   height: 25px !important;
+   margin-left: 3px !important;
+   margin-right: 3px !important;
+   margin-top: 10px !important;
+   background-color: #dddddd !important; 
+   color: black !important;
+   border-radius: 2px !important;
+   
+}
+
+ div.jitu > div >div>div>div>div>ul>li:hover {
+   border-radius: 2px !important;
+   border:2px solid blue !important;
+}
+
+div.jitu > div >div>div>div>div>ul>li:active {
+   background-color: #669999 !important;
+   color: white !important;
+   border:none !important;
+}
+
+div.jitu>div>div>div:last-child>div:first-child{
+   border: none !important; 
+   padding-top: 0px !important; 
+   padding-bottom: 0px !important; 
+   margin-top: 0px !important; 
+   margin-bottom: -1px !important;
+}
+
+div.jitu>div>div>div>div:nth-child(1)>div:last-child{
+   border-top: 1px solid black !important;
+   padding: 0px !important;  
+   background-color: #dddddd !important;
+}
+
+div.jitu>div>div>button:first-child{
+   margin-right: 10px !important;
+   border-left-color: black !important;
+}
+
+.react-datepicker__navigation--next{ border-left-color : blue !important;}
