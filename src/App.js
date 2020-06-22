@@ -1,13 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react';
+import Layout from './components/Layout/Layout';
+import PhrBuilder from './containers/PhrBuilder/PhrBuilder';
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <div >
+        <Layout>
+         <PhrBuilder></PhrBuilder>
+        </Layout>
+
+      </div>
+    );
+  }
 }
 
 export default App;
