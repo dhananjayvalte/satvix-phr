@@ -42,7 +42,7 @@
 
 .input {
     height: 20px;
-    width: 325px;
+    width: 316px;
     border: 1.5px solid #c9c9c9;
     margin-top: 10px;
     margin-left: 15px;
@@ -53,42 +53,38 @@
 
 .dropDown {
     height: 30px;
-    width: 340px;
+    width: 330px;
     border-bottom: none;
     border: 1.5px solid #c9c9c9;
     margin-top: 10px;
     margin-left: 0px;
-    font-size: 14px;
+    font-size: 14px; background-color: white; color: black;
 }
 
-select:hover{
-        border: none !important;
-}
 
-.dropDown:hover, .dropDown:active {
-    height: 30px;
-    width: 340px;
-    border-bottom: none;
-    border: 1.5px solid blue;
-    margin-top: 10px;
-    margin-left: 0px;
-}
-
-.buttonConfirm {
+.buttonConfirm { 
+    border: none;
     background-color: #669999;
     color: #ffffff;
-    cursor: default;
-    font-size: 16px;
-    padding: 7px 15px;
     margin-left: 10px;
+    border-radius: 3px ;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;    
 }
 
-.buttonClear {
+.buttonClear { 
+    border: none;
     background-color: #e7e7dd;
-    cursor: default; 
-    color: #232323;
-    font-size: 16px;
-    padding: 7px 20px;
+    color: #232323;    
+    border-radius: 3px;    
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;    
 }
 
 .button {
@@ -97,7 +93,7 @@ select:hover{
 
 .tbltd{
       width: 100px;
-  }
+}
 
 .bigblue {
     color: #232323;
@@ -115,8 +111,9 @@ select:hover{
        width:100%;
        height:auto;
        padding:1%;
-       margin-left: 35px;
-       margin-top: -20px;
+       margin-left: 10px;
+       margin-top: -10px;
+       margin-bottom: 15px;
 }
 
 .containe2 {
@@ -127,11 +124,16 @@ select:hover{
     margin-top: -20px;
 }
 
-select {color:gray;padding-left: 5px !important;}
+select {
+    color:gray;
+    padding-left: 5px !important;
+}
    
 select option:not(:first-child){
       color: black !important;
       padding-left: 20px !important;
 }
 
-option{padding-left: 20px !important;}  
+option{
+    padding-left: 20px !important;
+}  

@@ -1,37 +1,31 @@
 import React, { useState } from 'react';
 import classes from './Appointment.module.css';
-import Select from '@material-ui/core/Select';
 import AppointmentIcon from '../../Images/calendar-clock.png';
 import ScheduledIcon from '../../Images/scheduled-check.png';
 import CustomDatePicker from '../DatePicker/DatePicker';
 
 
 const Appointment = (props) => {
-    const [state, setState] = React.useState(0);
-    const handleChange = (event) => {
-        const name = event.target.value;
-        setState(name);
+    const [countDoc, setCountDoc] = React.useState(0);
+    const [countDep, setCountDep] = React.useState(0);
+
+    const handleChangeDoctor = (event) => {
+        const name = event.target.value;        
+        setCountDoc(event.target.value);
     };
 
-    const [count, setCount] = React.useState(0);
-
-    const handleChangeNew = (event) => {
-        const name = event.target.value;
-        setCount(name)
+    const handleChangeDepartment = (event) => {
+        const name = event.target.value;        
+        setCountDep(event.target.value);
     };
 
     const clearHandler = () => {
         this.props.writeText(this.state.text)
         this.setState({
             text: ''
-        })
-        const dropDown = document.getElementById("age-native-simple");
-        dropDown.selectedIndex = 0;
-        const dropDown1 = document.getElementById("age-native-simple1");
-        dropDown.selectedIndex = 0;
+        })        
     }
 
-    console.log("Jitendra", count);
     return (
         <div>
             <div id="form">
@@ -45,8 +39,8 @@ const Appointment = (props) => {
                         </div>
                     </div>
                     <fieldset style={{ border: 0 }}>
-                        <div style={{ borderRight: "1px solid #808080", marginRight: "80px" }} >
-                            <table style={{ textAlign: 'right' }} >
+                        <div style={{ borderRight: "2px solid #d9d9d9", marginRight:"130px"  }} >
+                            <table style={{ textAlign: 'right' }} ><tbody>
                                 <tr>
                                     <td>
                                         <label style={{ marginTop: "-10%" }} className={classes.label} >Patient Name <span style={{ color: "red", fontSize: "18px" }}>*</span></label>
@@ -60,23 +54,17 @@ const Appointment = (props) => {
                                         <label style={{ marginTop: "-10%" }} className={classes.label}>Department <span style={{ color: "red", fontSize: "18px" }}>*</span></label>
                                     </td>
                                     <td >
-                                        <Select
-                                            style={{ border: "none" }, state == 0 ? { color: "gray", fontSize: "14px" } : { color: "Black" }}
+                                        <select value={countDep}
+                                            onChange={handleChangeDepartment}
+                                            style={{ border: "none" },
+                                                countDep == 0 ? { color: "gray", fontSize: "14px" } : { color: "Black" }}
                                             className={classes.dropDown}
-                                            native
-                                            value={state}
-                                            onChange={handleChange}
-                                            inputProps={{
-                                                name: 'age',
-                                                id: 'age-native-simple',
-                                            }}
-                                        >
-                                            <option value={0} selected disabled hidden>Select Department</option>
-                                            <option value={5}></option>
-                                            <option value={10}>Ten</option>
-                                            <option value={20}>Twenty</option>
-                                            <option value={30}>Thirty</option>
-                                        </Select>
+                                            name="Department" id="Department">
+                                            <option value={0} selected disabled hidden defaultValue>Select Department</option>
+                                            <option value="Cardiology">Cardiology</option>
+                                            <option value="Neurology">Neurology</option>
+                                            <option value="Obstetrics and gynaecology">Obstetrics and gynaecology</option>
+                                        </select>
                                     </td>
                                 </tr>
                                 <tr>
@@ -84,29 +72,23 @@ const Appointment = (props) => {
                                         <label style={{ fontSize: "14px", marginRight: "10px", marginTop: "-1%" }} className={classes.label}>Doctor</label>
                                     </td>
                                     <td>
-                                        <Select
-                                            style={{ border: "none" }, count == 0 ? { color: "gray", fontSize: "14px" } : { color: "Black" }}
+                                        <select
+                                            value={countDoc}
+                                            onChange={handleChangeDoctor}
+                                            style={{ border: "none" }, countDoc == 0 ? { color: "gray", fontSize: "14px" } : { color: "Black" }}
                                             className={classes.dropDown}
-                                            native
-                                            value={count}
-                                            onChange={handleChangeNew}
-                                            inputProps={{
-                                                name: 'age3',
-                                                id: 'age-native-simple1',
-                                            }}
-                                        >
-                                            <option value={0} selected disabled hidden >Select Doctor</option>
-                                            {/* <option value="" >Select Doctor</option> */}
-                                            <option value={5}></option>
-                                            <option value={1}>One</option>
-                                            <option value={2}>Two</option>
-                                            <option value={3}>Three</option>
-                                        </Select>
+                                            name="Doctor" id="Doctor">
+                                            <option value={0} selected disabled hidden defaultValue >Select Doctor</option>
+                                            {/* <option value="Dr. Kiran">Dr. Kiran</option> */}
+                                            <option value="Dr. Kiran">Dr. Kiran</option>
+                                            <option value="Dr. Vishal">Dr. Vishal</option>
+                                            <option value="Dr. Patil">Dr. Patil</option>
+                                        </select>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className={classes.tbltd}>
-                                        <div style={{ marginTop: "-135%" }}>
+                                        <div style={{ marginTop: "-120%" }}>
                                             <label className={classes.label}>Date and Time <span style={{ color: "red", fontSize: "18px" }}>*</span></label>
                                         </div>
                                     </td>
@@ -125,7 +107,7 @@ const Appointment = (props) => {
                                             <button className={classes.buttonConfirm} >Confirm</button>
                                         </div>
                                     </td>
-                                </tr>
+                                </tr></tbody>
                             </table>
                         </div>
                     </fieldset>
