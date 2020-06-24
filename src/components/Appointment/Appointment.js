@@ -4,6 +4,7 @@ import Select from '@material-ui/core/Select';
 import AppointmentIcon from '../../Images/calendar-clock.png';
 import ScheduledIcon from '../../Images/scheduled-check.png';
 import CustomDatePicker from '../DatePicker/DatePicker';
+import ScheduledAppointments from '../scheduledAppointments/ScheduledAppointments';
 
 
 const Appointment = (props) => {
@@ -133,7 +134,7 @@ const Appointment = (props) => {
             </div>
             <div id="form">
                 <form className={classes.formNew}>
-                    <div className={classes.container2}>
+                    <div style={{marginLeft:"15%"}}>
                         <div>
                             <img src={ScheduledIcon} className={classes.iconDetails} />
                         </div>
@@ -142,7 +143,8 @@ const Appointment = (props) => {
                         </div>
                     </div>
                     <div className={classes.bigblue}>
-                        <label >No Scheduled Appointments</label>
+                        {/* <label >No Scheduled Appointments</label> */}
+                        <ScheduledAppointments/>
                     </div>
                 </form>
             </div>

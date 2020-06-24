@@ -1,0 +1,48 @@
+.main{
+    border: 1px solid #808080 ;
+    height: 90px;
+    width: 70%;
+    padding: 10px;
+    justify-content: center;
+}
+
+.time{
+    margin-left: 20px;
+}
+
+.iconDetails{
+    width: 10px;
+    height: 10px;
+}
+.editIcon {
+    width: 20px;
+    height: 20px;
+    margin-left: 70px;
+}
+
+.deleteIcon {
+    width: 20px;
+    height: 20px;
+    float: right;
+   
+}
+
+.deleteIcon:hover{
+    background-color: white;
+    color:  black;
+    width: 20px;
+    height: 20px;
+    float: right;
+   
+}
+
+.toolTip{
+    border-radius:none !important;
+    background-color: white !important;
+    color: black !important;
+}
+
+
+.ul{
+    list-style-type: none;
+}
